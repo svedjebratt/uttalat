@@ -23,7 +23,8 @@ function addBundles() {
             unken: 'innerst',
             ranson: 'fikon',
             lillen: {
-                ryttare: 'skriver :liten uppsats'
+                ryttare: 'skriver :liten uppsats',
+                flingsalt: 'hepp :tuff: <a href="mailto::minMail">knaper</a> :snabel:elak och bitter'
             }
         }
     });
@@ -49,5 +50,7 @@ describe('get messages', function() {
 
     it('checks that argument object can be supplied to replace variables', function() {
         expect(m('lust.lillen.ryttare', 'enkom.snabel', {liten: 'skarp'})).toBe('skriver skarp uppsats');
+        expect(m('not_exist', 'lust.lillen.flingsalt', {tuff: 'butter', minMail: 'klarblank@test.se', snabel: 'akter'}))
+            .toBe('hepp butter: <a href="mailto:klarblank@test.se">knaper</a> akter:elak och bitter');
     });
 });
