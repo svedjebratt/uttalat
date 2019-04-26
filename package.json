@@ -1,6 +1,6 @@
 {
   "name": "uttalat",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Text message management",
   "main": "dist/index.js",
   "scripts": {

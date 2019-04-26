@@ -1,5 +1,8 @@
-export function addBundle(bundle: {}): void;
+export interface Uttalat {
+    (key: string, ...arg: any[]): any;
 
-export default function getMessage(key: string, ...arg: any[]): any;
+    addBundle(bundle: {}): void;
+    getHtmlMessage(key: string, ...arg: any[]): any;
+}
 
-export function getHtmlMessage(key: string, ...arg: any[]): any;
+export default function uttalat(): Uttalat;
