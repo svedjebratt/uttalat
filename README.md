@@ -17,15 +17,19 @@ const bundle = {
 Add bundles to `uttalat`.
 
 ```js
-import {addBundle} from 'uttalat';
+import uttalat from 'uttalat';
 
-addBundle(bundle);
+const m = uttalat();
+
+m.addBundle(bundle);
 ```
 
 The text messages can be retrieved using dot notation.
 
 ```js
-import m from 'uttalat';
+import uttalat from 'uttalat';
+
+const m = uttalat();
 
 function HelloWorld({errorMessage}) {
     return (
@@ -50,7 +54,7 @@ const bundle = {
     greet: ':greeting World!'
 }
 
-addBundle(bundle);
+m.addBundle(bundle);
 
 const message = m('greet', {greeting: 'Hello'}); // "Hello World!"
 ```
