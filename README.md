@@ -75,7 +75,7 @@ _get text message_
 _adds a new bundle with text messages_
 
 * `bundle [object]`: any object with text messages
-* `override`: optionally specify if the added bundle should override previous bundles
+* `override [boolean]`: optionally specify if the added bundle should override previous bundles
 
 #### `uttalat.getHtmlMessage(key, fallbackKey1, ..., fallbackKeyN, args)`
 
