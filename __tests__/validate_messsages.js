@@ -1,7 +1,7 @@
 jest.dontMock('../dist/index');
 var uttalat = require('../dist/index');
-var m = uttalat.default;
-var addBundle = uttalat.addBundle;
+var m = uttalat.default();
+var addBundle = m.addBundle;
 
 function addBundles() {
     addBundle({
@@ -52,5 +52,13 @@ describe('get messages', function() {
         expect(m('lust.lillen.ryttare', 'enkom.snabel', {liten: 'skarp'})).toBe('skriver skarp uppsats');
         expect(m('not_exist', 'lust.lillen.flingsalt', {tuff: 'butter', minMail: 'klarblank@test.se', snabel: 'akter'}))
             .toBe('hepp butter: <a href="mailto:klarblank@test.se">knaper</a> akter:elak och bitter');
+    });
+
+    it('checks override in addBundle', function() {
+        addBundle({
+            vilsen: 'Absorberat'
+        }, true);
+
+        expect(m('vilsen')).toBe('Absorberat');
     });
 });

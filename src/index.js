@@ -1,8 +1,12 @@
 export default function uttalat() {
     const bundles = [];
 
-    function addBundle(bundle) {
-        bundles.push(bundle);
+    function addBundle(bundle, override) {
+        if (override) {
+            bundles.splice(0, 0, bundle);
+        } else {
+            bundles.push(bundle);
+        }
     }
 
     function getHtmlMessage(key, args) {

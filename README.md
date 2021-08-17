@@ -70,11 +70,12 @@ _get text message_
 * `args [object]`: replace variables in text message with values in `args`.
 * returns: `[string]` the text message found or `key` if not found.
 
-#### `uttalat.addBundle(bundle)`
+#### `uttalat.addBundle(bundle, override)`
 
 _adds a new bundle with text messages_
 
 * `bundle [object]`: any object with text messages
+* `override`: optionally specify if the added bundle should override previous bundles
 
 #### `uttalat.getHtmlMessage(key, fallbackKey1, ..., fallbackKeyN, args)`
 

@@ -1,7 +1,7 @@
 export interface Uttalat {
     (key: string, ...arg: any[]): any;
 
-    addBundle(bundle: {}): void;
+    addBundle(bundle: {}, override?: boolean): void;
     getHtmlMessage(key: string, ...arg: any[]): any;
 }
 
